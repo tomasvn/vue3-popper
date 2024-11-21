@@ -1,23 +1,25 @@
 declare module "vue3-popper" {
   import { DefineComponent } from "vue";
 
-  interface Props {
-    placement?:
-      | "auto"
-      | "auto-start"
-      | "auto-end"
-      | "top"
-      | "top-start"
-      | "top-end"
-      | "bottom"
-      | "bottom-start"
-      | "bottom-end"
-      | "right"
-      | "right-start"
-      | "right-end"
-      | "left"
-      | "left-start"
-      | "left-end";
+  export type Placement =
+  | "auto"
+  | "auto-start"
+  | "auto-end"
+  | "top"
+  | "top-start"
+  | "top-end"
+  | "bottom"
+  | "bottom-start"
+  | "bottom-end"
+  | "right"
+  | "right-start"
+  | "right-end"
+  | "left"
+  | "left-start"
+  | "left-end";
+
+  export interface PopperProps {
+    placement?: Placement;
     disableClickAway?: boolean;
     offsetSkid?: string;
     offsetDistance?: string;
@@ -36,7 +38,7 @@ declare module "vue3-popper" {
     "onClose:popper"?: () => void;
   }
 
-  const Popper: DefineComponent<Props>;
+  const Popper: DefineComponent<PopperProps>;
 
   export default Popper;
 }
