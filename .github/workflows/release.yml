@@ -1,3 +1,4 @@
+# https://dev.to/receter/automatically-publish-your-node-package-to-npm-with-pnpm-and-github-actions-22eg
 name: Release components package
 
 on:
