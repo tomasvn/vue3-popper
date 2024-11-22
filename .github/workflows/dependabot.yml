@@ -1,0 +1,11 @@
+version: 2
+updates:
+  - package-ecosystem: "pnpm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      time: "12:00"
+      timezone: "Europe/Prague"
+    commit-message:
+      prefix: "[DEPENDABOT]"
+    versioning-strategy: 'increase'
